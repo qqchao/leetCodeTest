@@ -1,4 +1,4 @@
-package explore.level1.string;
+package problems;
 
 /**
  * 请编写一个函数，其功能是将输入的字符串反转过来。
@@ -8,7 +8,7 @@ package explore.level1.string;
  * 输入：s = "hello"
  * 返回："olleh"
  */
-public class ReverseString {
+public class P344reverseString {
     public static void main(String[] args) {
         System.out.println(reverseString(""));
     }

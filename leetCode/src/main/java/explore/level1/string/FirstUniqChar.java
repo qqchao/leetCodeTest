@@ -1,0 +1,51 @@
+package explore.level1.string;
+
+/**
+ * Class:
+ *
+ * @author 秦超
+ * 2018/7/20
+ */
+public class FirstUniqChar {
+    public static void main(String[] args) {
+        System.out.println(firstUniqChar("helloheod"));
+        System.out.println(firstUniqChar2("helloheod"));
+        System.out.println(firstUniqChar3("helloheod"));
+    }
+
+    public static int firstUniqChar(String s) {
+        char[] ss = s.toCharArray();
+        for(int i = 0; i < ss.length; i++){
+            for(int j = 0;i < ss.length; j++){
+                if(i != j && ss[i] == ss[j]) break;
+                if(j == ss.length-1) return i;
+            }
+        }
+
+        return -1;
+    }
+
+    /**
+     * 找String中字符的首位坐标
+     */
+    public static int firstUniqChar2(String s) {
+        int result = -1;
+        for(char c = 'a';c<='z';c++){
+            int index = s.indexOf(c);
+            if(index != -1 && index == s.lastIndexOf(c)){
+                result = result != -1?Math.min(result,index):index;
+            }
+        }
+        return result;
+    }
+
+    public static int firstUniqChar3(String s) {
+        char[] ss = s.toCharArray();
+        for(int i = 0; i < ss.length; i++){
+            char c = ss[i];
+            if(s.indexOf(c) == s.lastIndexOf(c)) return i;
+        }
+
+        return -1;
+    }
+}
