@@ -1,4 +1,4 @@
-package explore.array;
+package explore.level1.array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
