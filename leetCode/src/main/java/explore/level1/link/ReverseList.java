@@ -1,4 +1,4 @@
-package problems;
+package explore.level1.link;
 
 /**
  * 反转一个单链表。
@@ -10,7 +10,7 @@ package problems;
  * 进阶:
  * 你可以迭代或递归地反转链表。你能否用两种方法解决这道题？
  */
-public class P206reverseList {
+public class ReverseList {
 
     public static void main(String[] args) {
         ListNode l = new ListNode(1);

@@ -65,4 +65,22 @@ public class RotateII {
             }
         }
     }
+
+
+    //转置矩阵
+    public static int[][] rotate2(int[][] A) {
+        int l1 = A.length;
+        int l2 = A[0].length;
+
+        int[][] B = new int[l2][l1];
+
+        for (int i = 0; i < l1; i++){
+            for (int j = i + 1; j < l2; j++){
+                B[j][i] = A[i][j];
+            }
+        }
+        return B;
+    }
+
+
 }
