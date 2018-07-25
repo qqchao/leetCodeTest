@@ -46,7 +46,6 @@ public class CountAndSay {
             result = new StringBuilder("");
             int count = 1;
             char c = pre.charAt(0);
-            String row = "";
             for(int i = 1; i < pre.length(); i++){
                 if(pre.charAt(i) == c){
                     count++;

@@ -33,10 +33,19 @@ import java.util.List;
 public class IsValidBST {
 
     public static void main(String[] args) {
+        TreeNode H = new TreeNode(8, null, null);
+        TreeNode G = new TreeNode(7, H, null);
+        TreeNode F = new TreeNode(6, null, null);
+        TreeNode E = new TreeNode(5, null, null);
+        TreeNode D = new TreeNode(4, null, G);
+        TreeNode C = new TreeNode(3, E, F);
+        TreeNode B = new TreeNode(2, D, null);
+        TreeNode A = new TreeNode(1, B, C);
 
+        System.out.println(isValidBST(A));
     }
 
-    public class TreeNode {
+    public static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -44,9 +53,15 @@ public class IsValidBST {
         TreeNode(int x) {
             val = x;
         }
+
+        public TreeNode(int val, TreeNode left, TreeNode right){
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
     }
 
-    public boolean isValidBST(TreeNode root) {
+    public static boolean isValidBST(TreeNode root) {
         if(root == null) return true;
 
         List<Integer> treeList = treeToList(root, new ArrayList<Integer>());
@@ -58,7 +73,7 @@ public class IsValidBST {
         return true;
     }
 
-    public List<Integer> treeToList(TreeNode root, List<Integer> list){
+    public static List<Integer> treeToList(TreeNode root, List<Integer> list){
         if(root.left != null){
             treeToList(root.left, list);
         }

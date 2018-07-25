@@ -24,10 +24,20 @@ package explore.level1.tree;
 public class IsSymmetric {
 
     public static void main(String[] args) {
+        TreeNode H = new TreeNode(8, null, null);
+        TreeNode G = new TreeNode(7, H, null);
+        TreeNode F = new TreeNode(6, null, null);
+        TreeNode E = new TreeNode(5, null, null);
+        TreeNode D = new TreeNode(4, null, G);
+        TreeNode C = new TreeNode(3, E, F);
+        TreeNode B = new TreeNode(2, D, null);
+        TreeNode A = new TreeNode(1, B, C);
 
+        System.out.println(isSymmetric(A));
+        System.out.println(isSymmetric(A));
     }
 
-    public class TreeNode {
+    public static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -35,14 +45,20 @@ public class IsSymmetric {
         TreeNode(int x) {
             val = x;
         }
+
+        public TreeNode(int val, TreeNode left, TreeNode right){
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
     }
 
-    public boolean isSymmetric(TreeNode root) {
+    public static boolean isSymmetric(TreeNode root) {
         if(root == null) return true;
         return isSymmetric(root.left, root.right);
     }
 
-    public boolean isSymmetric(TreeNode left, TreeNode right) {
+    public static boolean isSymmetric(TreeNode left, TreeNode right) {
         if(left == null && right == null) return true;
         if(left == null || right == null) return false;
         return (left.val == right.val) && isSymmetric(left.left, right.right) && isSymmetric(left.right, right.left);
