@@ -3,7 +3,6 @@ package other.treenode;
 /**
  * Class:
  *
- * @author 秦超
  * 2018/7/23
  */
 public class BinaryTree {
