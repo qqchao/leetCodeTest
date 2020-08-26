@@ -31,6 +31,7 @@ public class P70ClimbStairs {
         System.out.println(climbStairs(4));
         System.out.println(climbStairs(5));
         System.out.println(climbStairs(6));
+        System.out.println(climbStairs(16));
         System.out.println(climbStairs(54));
     }
 

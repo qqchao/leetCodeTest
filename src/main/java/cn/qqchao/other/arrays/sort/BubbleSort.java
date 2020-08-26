@@ -28,8 +28,10 @@ public class BubbleSort {
                     arr[j+1] = arr[j];
                     arr[j] = temp;
                 }
+                System.out.println(Arrays.toString(arr));
             }
         }
+        System.out.println("result---");
         return arr;
     }
 
