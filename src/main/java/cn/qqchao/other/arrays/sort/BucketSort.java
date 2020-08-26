@@ -32,7 +32,7 @@ public class BucketSort {
 
         //桶数
         int bucketNum = (max - min) / arr.length + 1;
-        ArrayList<ArrayList<Integer>> bucketArr = new ArrayList<>(bucketNum);
+        ArrayList<ArrayList<Integer>> bucketArr = new ArrayList(bucketNum);
         for(int i = 0; i < bucketNum; i++){
             bucketArr.add(new ArrayList<Integer>());
         }
