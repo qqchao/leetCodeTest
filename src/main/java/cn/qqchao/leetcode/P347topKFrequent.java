@@ -48,9 +48,9 @@ public class P347topKFrequent {
             add(numCountsMap, nums[i]);
         }
 
-        List<Map<String, Integer>> countList = new ArrayList<>();
+        List<Map<String, Integer>> countList = new ArrayList();
         numCountsMap.keySet().forEach(num -> {
-            Map<String, Integer> countMap = new HashMap<>();
+            Map<String, Integer> countMap = new HashMap();
             countMap.put(kNum, num);
             countMap.put(kCount, numCountsMap.get(num));
             countList.add(countMap);
