@@ -88,7 +88,7 @@ public class LinkNode {
     }
 
     public static void main(String[] args) {
-        LinkNode l = new LinkNode();
+        /*LinkNode l = new LinkNode();
         l.addNode("A");
 
         l.addNode("B");
@@ -106,6 +106,59 @@ public class LinkNode {
         System.out.println("删除节点：" + searchNode);
         l.deleteNode(searchNode);
         System.out.println("删除节点后的链表：");
-        l.print();
+        l.print();*/
+
+
+        ListNode node1 = new ListNode(1);
+        ListNode node2 = new ListNode(2);
+        ListNode node3 = new ListNode(3);
+        ListNode node4 = new ListNode(4);
+        ListNode node5 = new ListNode(5);
+
+        node1.next = node2;
+        node2.next = node3;
+        node3.next = node4;
+        node4.next = node5;
+
+        System.out.println(FindKthToTail(node1, 6).val);
+
     }
+
+
+
+    public static class ListNode {
+        int val;
+        ListNode next = null;
+        public ListNode(int val) {
+          this.val = val;
+        }
+    }
+
+
+        /**
+         * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+         *
+         *
+         * @param pHead ListNode类
+         * @param k int整型
+         * @return ListNode类
+         */
+        public static ListNode FindKthToTail (ListNode pHead, int k) {
+            // write code here
+            ListNode fast = pHead;
+            ListNode slow = pHead;
+
+            for(int i = 0; i < k; i++){
+                if (fast == null) {
+                    return null;
+                }
+                fast = fast.next;
+            }
+            while (fast!=null) {
+                fast = fast.next;
+                slow = slow.next;
+            }
+            return slow;
+
+        }
 }
