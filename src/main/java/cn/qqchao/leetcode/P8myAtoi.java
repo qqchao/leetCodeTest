@@ -53,11 +53,16 @@ package cn.qqchao.leetcode;
  *      因此返回 INT_MIN (−231) 。
  *
  * 来源：力扣（LeetCode）
- * 链接：https://leetcode-cn.com/problems/string-to-integer-atoi
+ * 链接：<a href="https://leetcode-cn.com/problems/string-to-integer-atoi">...</a>
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 public class P8myAtoi {
-    public int myAtoi(String str) {
+
+    public static void main(String[] args) {
+        System.out.println(myAtoi("aaa 234 wde"));
+        System.out.println(myAtoi("234 wde"));
+    }
+    public static int myAtoi(String str) {
         boolean start = false;
         str = str.trim();
         int upper = 1;
